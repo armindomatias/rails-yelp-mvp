@@ -1,0 +1,19 @@
+<h1><%= @restaurant.name %> 🌇</h1>
+
+<h4>Category: 🫘</h4>
+
+<p><%= @restaurant.category %></p>
+
+<h4>Address: 🌍</h4>
+
+<p><%= @restaurant.address %></p>
+
+<h4>Reviews: 😱</h4>
+<ul>
+  <% @reviews.each do |review| %></p>
+  <li><%= review.rating %>/5 || <%= review.content %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to 'Add a Review 🔎', new_restaurant_review_path(params[:id]) %></p>
+<p><%= link_to 'Back to Restaurants 😢', restaurants_path %></p>
